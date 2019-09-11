@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+	RewriteRule ^(.*) - [E=W_BASE:%1]
+
+	# Pas de réécriture sur les vrais fichiers
+	RewriteCond %{REQUEST_FILENAME} -f
+	RewriteRule .? - [L]
+
+	# Réécrit tout le reste à public/index.php.
+	RewriteRule .? %{ENV:W_BASE}/index.php [L]
+</IfModule>
