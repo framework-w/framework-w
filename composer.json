@@ -32,7 +32,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/axessweb/framework-w"
+            "url": "https://github.com/framework-w/framework-w"
         }
     ]
 }
