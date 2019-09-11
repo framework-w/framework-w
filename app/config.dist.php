@@ -2,7 +2,7 @@
 
 $w_config = [
 	//information de connexion à la bdd
-	'db_charset'			=> 'ut8mb4', 				//type d'encodage, devrait être utf8 où utf8mb4
+	'db_charset'			=> 'utf8mb4', 				//type d'encodage, devrait être utf8 où utf8mb4
 	'db_host'				=> 'localhost',				//hôte (ip, domaine) de la bdd
 	'db_port'				=> 3306,					//port de connexion de la bdd
 	'db_user'				=> 'root',					//nom d'utilisateur pour la bdd
