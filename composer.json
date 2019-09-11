@@ -2,7 +2,7 @@
     "name": "framework-w/framework-w",
     "description": "Light & powerful PHP framework",
     "keywords": ["framework", "mvc", "php"],
-    "version": "2.0.0-dev",
+    "version": "2.0.0",
     "minimum-stability": "dev",
     "license": "MIT",
     "prefer-stable": true,
