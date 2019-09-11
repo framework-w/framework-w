@@ -20,4 +20,4 @@ Son approche simple lui permet une prise en main rapide pour la mise en oeuvre d
 
 #### Crédits :
 * Axel Wargnier : [@axessweb](https://github.com/axessweb)
-* Matthieu Mota : [@@MatthieuMota](https://github.com/MatthieuMota)
+* Matthieu Mota : [@MatthieuMota](https://github.com/MatthieuMota)
