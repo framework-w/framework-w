@@ -10,9 +10,11 @@
         {
             "name": "Axel Wargnier",
             "email": "axel@axessweb.fr",
+            "role": "Developer"
         },
         {
             "name": "Matthieu Mota",
+            "email": "matthieumota@gmail.com",
             "role": "Developer"
         }
     ],
