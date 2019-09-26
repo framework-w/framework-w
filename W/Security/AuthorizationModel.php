@@ -49,7 +49,7 @@ class AuthorizationModel
 			}
 		}
 
-		if (!empty($loggedUser[$roleProperty]) && $loggedUser[$roleProperty] === $role){
+		if (!empty($loggedUser[$roleProperty]) && $loggedUser[$roleProperty] == $role){
 			return true;
 		}
 

@@ -20,6 +20,16 @@ namespace {
 		print '</pre>';
 	}
 
+	/** 
+	 *Alias de fonction 
+	 * @param $var La variable a debugger
+	 * @param $type Le type de sortie, print ou var_dump
+	 */
+	function dump($var, $type = 'dump')
+	{
+		debug($var, $type);
+	}
+
 	/**
 	 * Retourne l'instance de l'application depuis l'espace global
 	 * @return \W\App L'application
