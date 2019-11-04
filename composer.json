@@ -16,6 +16,11 @@
             "name": "Matthieu Mota",
             "email": "matthieumota@gmail.com",
             "role": "Developer"
+        },
+        {
+            "name": "Guillaume Sylvestre",
+            "email": "gsylvestre@gmail.com",
+            "role": "Initial Developer"
         }
     ],
     "require": {
