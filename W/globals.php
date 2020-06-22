@@ -25,9 +25,24 @@ namespace {
 	 * @param $var La variable a debugger
 	 * @param $type Le type de sortie, print ou var_dump
 	 */
-	function dump($var, $type = 'dump')
-	{
-		debug($var, $type);
+	if (!function_exists('dump')){
+		function dump($var, $type = 'dump')
+		{
+			debug($var, $type);
+		}
+	}
+
+	/** 
+	 * Alias de fonction 
+	 * @param $var La variable a debugger
+	 * @param $type Le type de sortie, print ou var_dump
+	 */
+	if (!function_exists('dd')){
+		function dd($var, $type = 'dump')
+		{
+			debug($var, $type);
+			die;
+		}
 	}
 
 	/**

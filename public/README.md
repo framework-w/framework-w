@@ -1,4 +1,4 @@
-###public/
+### public/
 
 Ce répertoire 3 éléments : 
 
