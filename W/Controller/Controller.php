@@ -161,7 +161,7 @@ class Controller
 	}
 
 	/**
-	 * Alias de méthode pour ressembler à Symfony
+	 * Alias de méthode
 	 */
 	public function render($file, array $data = array())
 	{
@@ -171,13 +171,13 @@ class Controller
 	/**
 	 * Affiche une page 403
 	 */
-	public function showForbidden()
+	public function showForbidden($error_message = null)
 	{
 		header('HTTP/1.0 403 Forbidden');
 
 		$file = self::PATH_VIEWS.'/w_errors/403.php';
 		if(file_exists($file)){
-			$this->show('w_errors/403');
+			$this->show('w_errors/403', ['error_message' => $error_message ?? '']);
 		}
 		else {
 			die('403');
@@ -187,21 +187,21 @@ class Controller
 	/**
 	 * Alias de fonction 
 	 */
-	public function httpForbidden()
+	public function httpForbidden($error_message = null)
 	{
-		$this->showForbidden();
+		$this->showForbidden($error_message);
 	}
 
 	/**
 	 * Affiche une page 404
 	 */
-	public function showNotFound()
+	public function showNotFound($error_message = null)
 	{
 		header('HTTP/1.0 404 Not Found');
 
 		$file = self::PATH_VIEWS.'/w_errors/404.php';
 		if(file_exists($file)){
-			$this->show('w_errors/404');
+			$this->show('w_errors/404', ['error_message' => $error_message ?? '']);
 		}
 		else {
 			die('404');
@@ -211,9 +211,9 @@ class Controller
 	/**
 	 * Alias de fonction 
 	 */
-	public function httpNotFound()
+	public function httpNotFound($error_message = null)
 	{
-		$this->showNotFound();
+		$this->showNotFound($error_message);
 	}
 
 
@@ -232,8 +232,9 @@ class Controller
 	 * @param mixed $roles Tableau de rôles, ou chaîne pour un seul
 	 * @param $route_to_redirect La route de redirection
 	 * @param $session_key La clé de la session
+	 * @param $error_message Le message d'erreur à transmettre à la vue
 	 */
-	public function allowTo($roles, $route_to_redirect = null, $session_key = 'user')
+	public function allowTo($roles, $route_to_redirect = null, $session_key = 'user', $error_message = null)
 	{
 		if (!is_array($roles)){
 			$roles = [$roles];
@@ -245,7 +246,7 @@ class Controller
 			}
 		}
 
-		$this->showForbidden();
+		$this->showForbidden($error_message);
 	}
 
 
