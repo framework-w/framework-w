@@ -92,7 +92,7 @@ class Controller
 			$level = 'info';
 		}
 
-		$_SESSION['flash'] = [
+		$_SESSION['flash'][] = [
 			'message' 	=> (!isset($message) || empty($message)) ? 'No message defined' : ucfirst($message),
 			'level'	 	=> $level,
 		];
@@ -126,7 +126,7 @@ class Controller
 		$engine->loadExtension(new \W\View\Plates\PlatesExtensions());
 
 		// le flash message
-		$flash_message = (isset($_SESSION['flash']) && !empty($_SESSION['flash'])) ? (object) $_SESSION['flash'] : null;
+		$flash_message = (isset($_SESSION['flash']) && !empty($_SESSION['flash'])) ? $_SESSION['flash'] : null;
 
 		// 
 		$app = getApp();		
