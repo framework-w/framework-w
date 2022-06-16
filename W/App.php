@@ -29,7 +29,9 @@ class App
 	 */
 	public function __construct(array $w_routes, array $w_config = array())
 	{
-		session_start();
+		if(session_status() === PHP_SESSION_NONE){
+			session_start();
+		}
 		$this->setConfig($w_config);
 		$this->routingSetup($w_routes);
 	}

@@ -2,7 +2,7 @@
     "name": "framework-w/framework-w",
     "description": "Light & powerful PHP framework",
     "keywords": ["framework", "mvc", "php"],
-    "version": "2.1.1",
+    "version": "2.1.2",
     "minimum-stability": "dev",
     "license": "MIT",
     "prefer-stable": true,
@@ -26,9 +26,9 @@
     "require": {
         "php": ">=7.2.5",
         "altorouter/altorouter": "^2.0",
-        "league/plates": "^3.3",
-        "phpmailer/phpmailer": "^6.1",
-        "symfony/var-dumper": "^5.1"
+        "league/plates": "^3.4",
+        "phpmailer/phpmailer": "^6.6",
+        "symfony/var-dumper": "^5.4"
     },
     "autoload": {
         "psr-4": {
